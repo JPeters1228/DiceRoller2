@@ -71,24 +71,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/currentDie" android:textSize="36sp"
-            android:layout_marginEnd="100dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="200dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintEnd_toEndOf="@+id/dieRoll"
+            app:layout_constraintTop_toBottomOf="@+id/dicePic"
+            app:layout_constraintBottom_toTopOf="@+id/dieRoll"
+            app:layout_constraintStart_toStartOf="@+id/dieRoll"/>
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dieRoll"
             android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="110dp" android:layout_marginTop="25dp"
-            app:layout_constraintTop_toBottomOf="@+id/currentDie"/>
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/currentDie"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
-            android:id="@+id/dicePic" android:layout_marginTop="40dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="50dp"/>
+            android:id="@+id/dicePic"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="@+id/currentDie"
+            app:layout_constraintBottom_toTopOf="@+id/currentDie"
+            app:layout_constraintStart_toStartOf="@+id/currentDie"/>
     <Button
             android:text="d%"
             android:layout_width="wrap_content"
@@ -99,4 +102,10 @@
             app:layout_constraintEnd_toEndOf="@+id/d20Button"
             app:layout_constraintHorizontal_bias="0.0" android:textColor="@android:color/black"
             android:background="@android:color/darker_gray"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
+            android:id="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/dieRoll"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="50dp"/>
 </android.support.constraint.ConstraintLayout>
