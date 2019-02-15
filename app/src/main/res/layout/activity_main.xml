@@ -11,61 +11,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d4Button" android:textSize="24sp"
+            android:onClick="buttonClick"
             android:background="#5B3717" android:textColor="@android:color/background_light"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/d6Button" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="50dp"/>
+            android:layout_marginStart="50dp" app:layout_constraintVertical_chainStyle="spread" android:tag="4"/>
     <Button
             android:text="d6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d6Button"
+            android:onClick="buttonClick"
             android:background="@android:color/background_light" android:textColor="@android:color/background_dark"
             android:textSize="24sp" style="@style/Widget.AppCompat.Button"
             app:layout_constraintTop_toBottomOf="@+id/d4Button"
             app:layout_constraintBottom_toTopOf="@+id/d8Button"
-            app:layout_constraintStart_toStartOf="@+id/d4Button" app:layout_constraintEnd_toEndOf="@+id/d4Button"/>
+            app:layout_constraintStart_toStartOf="@+id/d4Button" app:layout_constraintEnd_toEndOf="@+id/d4Button"
+            android:tag="6"/>
     <Button
             android:text="d8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d8Button"
+            android:onClick="buttonClick"
             android:textSize="24sp" android:textColor="@color/colorPrimaryDark"
             android:background="@android:color/background_dark"
             app:layout_constraintTop_toBottomOf="@+id/d6Button"
             app:layout_constraintBottom_toTopOf="@+id/d10Button"
-            app:layout_constraintStart_toStartOf="@+id/d6Button" app:layout_constraintEnd_toEndOf="@+id/d6Button"/>
+            app:layout_constraintStart_toStartOf="@+id/d6Button" app:layout_constraintEnd_toEndOf="@+id/d6Button"
+            android:tag="8"/>
     <Button
             android:text="d10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d10Button"
+            android:onClick="buttonClick"
             android:background="#9E3D10" android:textColor="@android:color/background_dark"
             android:textSize="24sp"
             app:layout_constraintTop_toBottomOf="@+id/d8Button"
             app:layout_constraintBottom_toTopOf="@+id/d12Button"
-            app:layout_constraintStart_toStartOf="@+id/d8Button" app:layout_constraintEnd_toEndOf="@+id/d8Button"/>
+            app:layout_constraintStart_toStartOf="@+id/d8Button" app:layout_constraintEnd_toEndOf="@+id/d8Button"
+            android:tag="10"/>
     <Button
             android:text="d12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d12Button"
+            android:onClick="buttonClick"
             android:background="#AB004D" android:textSize="24sp"
             android:textColor="#966419"
             app:layout_constraintTop_toBottomOf="@+id/d10Button"
             app:layout_constraintBottom_toTopOf="@+id/d20Button"
-            app:layout_constraintStart_toStartOf="@+id/d10Button" app:layout_constraintEnd_toEndOf="@+id/d10Button"/>
+            app:layout_constraintStart_toStartOf="@+id/d10Button" app:layout_constraintEnd_toEndOf="@+id/d10Button"
+            android:tag="12"/>
     <Button
             android:text="d20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d20Button"
+            android:onClick="buttonClick"
             android:background="#090072" android:textSize="24sp"
             android:textColor="@android:color/background_light"
             app:layout_constraintTop_toBottomOf="@+id/d12Button"
             app:layout_constraintBottom_toTopOf="@+id/d100button"
             app:layout_constraintStart_toStartOf="@+id/d12Button" app:layout_constraintEnd_toEndOf="@+id/d12Button"
-            app:layout_constraintHorizontal_bias="1.0"/>
+            app:layout_constraintHorizontal_bias="1.0" android:tag="20"/>
     <TextView
             android:text="Die"
             android:layout_width="wrap_content"
@@ -97,11 +107,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d100button" android:textSize="24sp"
+            android:onClick="buttonClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/d20Button" app:layout_constraintStart_toStartOf="@+id/d20Button"
             app:layout_constraintEnd_toEndOf="@+id/d20Button"
             app:layout_constraintHorizontal_bias="0.0" android:textColor="@android:color/black"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" android:tag="100"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
