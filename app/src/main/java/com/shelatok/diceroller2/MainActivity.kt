@@ -1,11 +1,8 @@
 package com.shelatok.diceroller2
 
 import android.content.Context
-import android.os.Build
+import android.os.*
 import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.os.VibrationEffect
-import android.os.Vibrator
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,16 +18,29 @@ class MainActivity : AppCompatActivity() {
                 vibrator.vibrate(100) // Vibrate method for below API Level 26
             }
         }
-
-//        for (i in 1..100000) {
-//            dieRoll.text = i.toString()
-//        }
         var sides= view.tag.toString().toInt()
         //Toast.makeText(applicationContext, dieRoll.text, Toast.LENGTH_SHORT).show()
         val roll = Random().nextInt(sides) + 1
         currentDie.text = "d$sides"
-        dieRoll.text = roll.toString()
+        //dieRoll.text = roll.toString()
         //dieRoll.text = "---"
+
+        var countDownTimer = object: CountDownTimer(100, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                dieRoll.text = " "
+            }
+            override fun onFinish() {
+                dieRoll.text = roll.toString()
+            }
+        }
+
+
+
+//        for (i in 1..100000) {
+//            dieRoll.text = i.toString()
+//        }
+
+        countDownTimer.start()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
