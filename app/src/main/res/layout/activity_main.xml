@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <Button
-            android:text="d4"
+            android:text="@string/d4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d4Button" android:textSize="24sp"
@@ -17,7 +17,7 @@
             app:layout_constraintBottom_toTopOf="@+id/d6Button" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="50dp" app:layout_constraintVertical_chainStyle="spread" android:tag="4"/>
     <Button
-            android:text="d6"
+            android:text="@string/d6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d6Button"
@@ -29,7 +29,7 @@
             app:layout_constraintStart_toStartOf="@+id/d4Button" app:layout_constraintEnd_toEndOf="@+id/d4Button"
             android:tag="6"/>
     <Button
-            android:text="d8"
+            android:text="@string/d8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d8Button"
@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="@+id/d6Button" app:layout_constraintEnd_toEndOf="@+id/d6Button"
             android:tag="8"/>
     <Button
-            android:text="d10"
+            android:text="@string/d10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d10Button"
@@ -53,7 +53,7 @@
             app:layout_constraintStart_toStartOf="@+id/d8Button" app:layout_constraintEnd_toEndOf="@+id/d8Button"
             android:tag="10"/>
     <Button
-            android:text="d12"
+            android:text="@string/d12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d12Button"
@@ -65,7 +65,7 @@
             app:layout_constraintStart_toStartOf="@+id/d10Button" app:layout_constraintEnd_toEndOf="@+id/d10Button"
             android:tag="12"/>
     <Button
-            android:text="d20"
+            android:text="@string/d20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d20Button"
@@ -77,7 +77,7 @@
             app:layout_constraintStart_toStartOf="@+id/d12Button" app:layout_constraintEnd_toEndOf="@+id/d12Button"
             app:layout_constraintHorizontal_bias="1.0" android:tag="20"/>
     <TextView
-            android:text="Die"
+            android:text="@string/die"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/currentDie" android:textSize="36sp"
@@ -86,7 +86,7 @@
             app:layout_constraintBottom_toTopOf="@+id/dieRoll"
             app:layout_constraintStart_toStartOf="@+id/dieRoll"/>
     <TextView
-            android:text="0"
+            android:text="@string/_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dieRoll"
@@ -101,9 +101,9 @@
             android:id="@+id/dicePic"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="@+id/currentDie"
             app:layout_constraintBottom_toTopOf="@+id/currentDie"
-            app:layout_constraintStart_toStartOf="@+id/currentDie"/>
+            app:layout_constraintStart_toStartOf="@+id/currentDie" android:contentDescription="@string/dice_pic"/>
     <Button
-            android:text="d%"
+            android:text="@string/d100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d100button" android:textSize="24sp"
@@ -118,5 +118,6 @@
             android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
             android:id="@+id/imageView"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/dieRoll"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="50dp"/>
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="50dp"
+            android:contentDescription="@string/dice_pic"/>
 </android.support.constraint.ConstraintLayout>

@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
                 vibrator.vibrate(100) // Vibrate method for below API Level 26
             }
         }
-        var sides= view.tag.toString().toInt()
+        val sides= view.tag.toString().toInt()
         val roll = Random().nextInt(sides) + 1
         currentDie.text = "d$sides"
 
-        var countDownTimer = object: CountDownTimer(100, 1000) {
+        val countDownTimer = object: CountDownTimer(100, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 dieRoll.text = " "
             }
