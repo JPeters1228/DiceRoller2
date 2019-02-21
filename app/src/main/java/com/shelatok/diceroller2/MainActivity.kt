@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val countDownTimer = object: CountDownTimer(100, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                dieRoll.text = " "
+                dieRoll.text = "    "
             }
             override fun onFinish() {
                 dieRoll.text = roll.toString()

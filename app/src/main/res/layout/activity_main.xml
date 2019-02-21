@@ -5,24 +5,25 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="@drawable/dicerollerbkgd">
     <Button
             android:text="@string/d4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d4Button" android:textSize="24sp"
             android:onClick="buttonClick"
-            android:background="#5B3717" android:textColor="@android:color/background_light"
+            android:background="@drawable/d4buttonbkgd" android:textColor="@android:color/background_light"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/d6Button" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="50dp" app:layout_constraintVertical_chainStyle="spread" android:tag="4"/>
+            app:layout_constraintBottom_toTopOf="@+id/d6Button"
+            app:layout_constraintVertical_chainStyle="spread" android:tag="4" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="50dp"/>
     <Button
             android:text="@string/d6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/d6Button"
             android:onClick="buttonClick"
-            android:background="@android:color/background_light" android:textColor="@android:color/background_dark"
+            android:background="@drawable/d6buttonbkgd" android:textColor="@android:color/background_dark"
             android:textSize="24sp" style="@style/Widget.AppCompat.Button"
             app:layout_constraintTop_toBottomOf="@+id/d4Button"
             app:layout_constraintBottom_toTopOf="@+id/d8Button"
@@ -34,8 +35,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/d8Button"
             android:onClick="buttonClick"
-            android:textSize="24sp" android:textColor="@color/colorPrimaryDark"
-            android:background="@android:color/background_dark"
+            android:textSize="24sp" android:textColor="#812C20"
+            android:background="@drawable/d8buttonbkgd"
             app:layout_constraintTop_toBottomOf="@+id/d6Button"
             app:layout_constraintBottom_toTopOf="@+id/d10Button"
             app:layout_constraintStart_toStartOf="@+id/d6Button" app:layout_constraintEnd_toEndOf="@+id/d6Button"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/d10Button"
             android:onClick="buttonClick"
-            android:background="#9E3D10" android:textColor="@android:color/background_dark"
+            android:background="@drawable/d10buttonbkgd" android:textColor="@android:color/background_dark"
             android:textSize="24sp"
             app:layout_constraintTop_toBottomOf="@+id/d8Button"
             app:layout_constraintBottom_toTopOf="@+id/d12Button"
@@ -58,8 +59,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/d12Button"
             android:onClick="buttonClick"
-            android:background="#AB004D" android:textSize="24sp"
-            android:textColor="#966419"
+            android:background="@drawable/d12buttonbkgd" android:textSize="24sp"
+            android:textColor="#CA9C26"
             app:layout_constraintTop_toBottomOf="@+id/d10Button"
             app:layout_constraintBottom_toTopOf="@+id/d20Button"
             app:layout_constraintStart_toStartOf="@+id/d10Button" app:layout_constraintEnd_toEndOf="@+id/d10Button"
@@ -70,7 +71,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/d20Button"
             android:onClick="buttonClick"
-            android:background="#090072" android:textSize="24sp"
+            android:background="@drawable/d20buttonbkgd" android:textSize="24sp"
             android:textColor="@android:color/background_light"
             app:layout_constraintTop_toBottomOf="@+id/d12Button"
             app:layout_constraintBottom_toTopOf="@+id/d100button"
@@ -84,7 +85,8 @@
             app:layout_constraintEnd_toEndOf="@+id/dieRoll"
             app:layout_constraintTop_toBottomOf="@+id/dicePic"
             app:layout_constraintBottom_toTopOf="@+id/dieRoll"
-            app:layout_constraintStart_toStartOf="@+id/dieRoll"/>
+            app:layout_constraintStart_toStartOf="@+id/dieRoll" android:textColor="@android:color/white"
+    />
     <TextView
             android:text="@string/_0"
             android:layout_width="wrap_content"
@@ -94,7 +96,8 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/currentDie"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="@+id/imageView"/>
+            app:layout_constraintStart_toStartOf="@+id/imageView" android:textColor="@android:color/white"
+    />
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
@@ -112,12 +115,12 @@
             app:layout_constraintTop_toBottomOf="@+id/d20Button" app:layout_constraintStart_toStartOf="@+id/d20Button"
             app:layout_constraintEnd_toEndOf="@+id/d20Button"
             app:layout_constraintHorizontal_bias="0.0" android:textColor="@android:color/black"
-            android:background="@android:color/darker_gray" android:tag="100"/>
+            android:background="@drawable/d100buttonbkgd" android:tag="100"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
             android:id="@+id/imageView"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/dieRoll"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="50dp"
-            android:contentDescription="@string/dice_pic"/>
+            android:contentDescription="@string/dice_pic" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="50dp"/>
 </android.support.constraint.ConstraintLayout>

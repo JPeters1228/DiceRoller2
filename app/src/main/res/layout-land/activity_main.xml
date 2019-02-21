@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/dicerollerbkgd">
+
+    <Button
+            android:text="@string/d4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d4button"
+            android:background="@drawable/d4buttonbkgd" android:textColor="@android:color/white"
+            android:textSize="24sp" android:onClick="buttonClick" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/d6button" app:layout_constraintStart_toStartOf="@+id/d6button"
+            app:layout_constraintEnd_toEndOf="@+id/d6button" android:tag="4"/>
+    <Button
+            android:text="@string/d6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d6button"
+            android:background="@drawable/d6buttonbkgd" android:textSize="24sp" android:onClick="buttonClick"
+            app:layout_constraintTop_toBottomOf="@+id/d4button"
+            app:layout_constraintBottom_toTopOf="@+id/d8button" app:layout_constraintStart_toStartOf="@+id/d8button"
+            app:layout_constraintEnd_toEndOf="@+id/d8button" android:tag="6"/>
+    <Button
+            android:text="@string/d8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d8button"
+            android:background="@drawable/d8buttonbkgd" android:textSize="24sp" android:textColor="#812C20"
+            android:onClick="buttonClick" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/d6button"
+            android:tag="8" android:layout_marginStart="40dp" app:layout_constraintStart_toStartOf="@+id/guideline"/>
+    <Button
+            android:text="@string/d10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d10button"
+            android:background="@drawable/d10buttonbkgd" android:textSize="24sp" android:onClick="buttonClick"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/d12button"
+            app:layout_constraintStart_toStartOf="@+id/d12button"
+            app:layout_constraintEnd_toEndOf="@+id/d12button" android:tag="10"/>
+    <Button
+            android:text="@string/d12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d12button"
+            android:background="@drawable/d12buttonbkgd" android:textSize="24sp" android:textColor="#CA9C26"
+            android:onClick="buttonClick" app:layout_constraintTop_toBottomOf="@+id/d10button"
+            app:layout_constraintBottom_toTopOf="@+id/d20button" app:layout_constraintStart_toStartOf="@+id/d20button"
+            app:layout_constraintEnd_toEndOf="@+id/d20button" android:tag="12"/>
+    <Button
+            android:text="@string/d20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d20button" android:textSize="24sp"
+            android:textColor="@android:color/white" android:background="@drawable/d20buttonbkgd"
+            android:onClick="buttonClick" app:layout_constraintTop_toBottomOf="@+id/d12button"
+            app:layout_constraintBottom_toTopOf="@+id/d100button" app:layout_constraintStart_toStartOf="@+id/d100button"
+            app:layout_constraintEnd_toEndOf="@+id/d100button" android:tag="20"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/dicerollerpic"
+            android:id="@+id/dicePic" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="20dp"/>
+    <TextView
+            android:text="@string/die"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentDie" android:textSize="36sp"
+            android:textColor="@android:color/white" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/dieRoll" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp"/>
+    <TextView
+            android:text="@string/_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dieRoll" android:textSize="36sp"
+            android:textColor="@android:color/white" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentDie" app:layout_constraintStart_toStartOf="@+id/currentDie"
+            app:layout_constraintEnd_toEndOf="@+id/currentDie"/>
+    <Button
+            android:text="@string/d100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d100button"
+            android:background="@drawable/d100buttonbkgd" android:textSize="24sp" android:onClick="buttonClick"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/d20button"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="60dp" android:tag="100"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline"
+                                          android:orientation="vertical"
+                                          app:layout_constraintGuide_percent="0.5"/>
+</android.support.constraint.ConstraintLayout>
